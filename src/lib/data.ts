@@ -62,6 +62,7 @@ export const teamMembers: TeamMember[] = [
     bio: 'Dirección estratégica, discovery comercial B2B, ingeniería de requerimientos y alianzas institucionales.',
     imageUrl: '/images/team/nicolas.jpg',
     specializations: ['Dirección Estratégica', 'Discovery Comercial', 'Ingeniería de Requerimientos'],
+    linkedinUrl: 'https://www.linkedin.com/in/nicolas-johny-l%C3%B3pez-olivas-182a71304/',
   },
   {
     id: 2,
@@ -70,6 +71,7 @@ export const teamMembers: TeamMember[] = [
     bio: 'Arquitectura de software, automatizaciones low-code, integración de APIs transaccionales e infraestructura cloud.',
     imageUrl: '/images/team/juan.jpg',
     specializations: ['Arquitectura de Software', 'Automatizaciones Low-Code', 'Cloud Infrastructure'],
+    linkedinUrl: 'https://www.linkedin.com/in/juanalexmiranda/',
   },
   {
     id: 3,
@@ -78,6 +80,7 @@ export const teamMembers: TeamMember[] = [
     bio: 'Estandarización y pipelines ETL de datos maestros, modelado dimensional relacional y tableros analíticos en Power BI.',
     imageUrl: '/images/team/walter.jpg',
     specializations: ['Data Engineering', 'ETL Pipelines', 'Power BI'],
+    linkedinUrl: 'https://www.linkedin.com/in/walterjsp/',
   },
   {
     id: 4,
@@ -86,6 +89,7 @@ export const teamMembers: TeamMember[] = [
     bio: 'Diagnóstico operativo en planta (Gemba Walk), estudio de tiempos y métodos, balance de flujos y modelado BPMN.',
     imageUrl: '/images/team/jesus.jpg',
     specializations: ['Procesos Industriales', 'Gemba Walk', 'Modelado BPMN'],
+    linkedinUrl: 'https://www.linkedin.com/in/jesus-roberto-regalado-avenda%C3%B1o-a9222b442/',
   },
   {
     id: 5,
@@ -94,5 +98,6 @@ export const teamMembers: TeamMember[] = [
     bio: 'Extracción y depuración en bases de datos relacionales (SQL), maquetación frontend y normalización masiva de inventarios.',
     imageUrl: '/images/team/luis.jpg',
     specializations: ['SQL', 'Frontend', 'Data Operations'],
+    linkedinUrl: 'https://www.linkedin.com/in/luis-eduardo-piscoya-poma-54a126367/',
   },
 ];

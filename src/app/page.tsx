@@ -25,9 +25,13 @@ export default function Home() {
         </div>
         <div className="container mx-auto flex items-center justify-between relative z-10 py-4 px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-white rounded-md flex items-center justify-center text-xs font-bold text-black group-hover:ring-2 group-hover:ring-accent transition-all duration-300">
-              LOGO
-            </div>
+            <Image
+              src="/images/logo.jpg"
+              alt="Nodux Logo"
+              width={48}
+              height={48}
+              className="rounded-md object-cover group-hover:ring-2 group-hover:ring-accent transition-all duration-300"
+            />
             <h1 className="text-2xl font-bold font-headline text-white group-hover:text-accent transition-colors duration-300">
               Nodux
             </h1>
@@ -69,9 +73,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60 z-10"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
             <div className="inline-block p-3 mb-6 bg-accent/20 rounded-full shadow-lg border border-accent/50">
-              <div className="w-16 h-16 bg-white rounded-md flex items-center justify-center text-sm font-bold text-black">
-                LOGO
-              </div>
+              <Image
+                src="/images/logo.jpg"
+                alt="Nodux Logo"
+                width={64}
+                height={64}
+                className="rounded-full object-cover"
+              />
             </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-headline tracking-tight leading-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-text-gradient">
               Soluciones que se adaptan a ti, tecnología que transforma.
