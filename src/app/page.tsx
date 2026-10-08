@@ -144,10 +144,7 @@ export default function Home() {
                         </div>
                       </CardContent>
                       <CardFooter className="p-6 pt-0 flex flex-col sm:flex-row justify-between items-center gap-2">
-                        <Button variant="outline" className="w-full sm:w-auto hover:bg-accent/10 hover:text-accent hover:border-accent">
-                          <Zap className="mr-2 h-4 w-4 text-accent" />
-                          Generar Descripción
-                        </Button>
+
                         <Link
                           href={`/portafolio/${project.id}`}
                           className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
