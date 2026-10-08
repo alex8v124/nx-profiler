@@ -6,8 +6,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
 
 export const metadata: Metadata = {
-  title: 'All-in Dev Solutions S.R.L.',
-  description: 'Soluciones tecnológicas y desarrollo de software a medida para impulsar empresas medianas. Aplicaciones web, de escritorio y consultoría experta.',
+  title: 'Nodux',
+  description: 'Nodux combina consultoría de operaciones, ingeniería de datos y automatización para transformar la gestión de inventarios y procesos en pequeñas y medianas empresas.',
   icons: {
     icon: '/images/all_in_dev_sol.jpg',
   },

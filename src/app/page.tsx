@@ -29,7 +29,7 @@ export default function Home() {
               LOGO
             </div>
             <h1 className="text-2xl font-bold font-headline text-white group-hover:text-accent transition-colors duration-300">
-              All-in Dev Solutions
+              Nodux
             </h1>
           </Link>
           <nav className="hidden md:flex gap-6">
@@ -77,7 +77,7 @@ export default function Home() {
               Soluciones que se adaptan a ti, tecnología que transforma.
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl mb-10 max-w-3xl mx-auto font-body text-muted-foreground/90">
-              En All-in Dev Solutions S.R.L. creamos software innovador y escalable, aplicaciones web y de escritorio de alta calidad, impulsando la transformación digital de empresas medianas en crecimiento.
+              Nodux combina consultoría de operaciones, ingeniería de datos y automatización para transformar la gestión de inventarios y procesos en pequeñas y medianas empresas. Diagnosticamos cuellos de botella en almacenes y puntos de venta, estructuramos bases de datos maestras y desplegamos soluciones digitales accesibles para que los comercios operen con control total, sin mermas y con respaldo analítico en tiempo real.
             </p>
             <div className="space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:gap-4">
               <Link
@@ -187,7 +187,7 @@ export default function Home() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground leading-relaxed">
-                        Brindar soluciones tecnológicas innovadoras y de alta calidad en desarrollo de software, aplicaciones web y de escritorio, adaptadas a las necesidades de nuestros clientes, impulsando su transformación digital y aportando valor sostenible a través de un equipo comprometido, creativo y profesional.
+                        Conectamos la realidad física del negocio con la ingeniería de datos y la automatización. Entramos a la operación para ordenar inventarios, estandarizar flujos y reemplazar registros manuales o dispersos por herramientas digitales ligeras y tableros de control. Nuestro propósito es simple: ayudar a los dueños y gerentes a eliminar fugas de dinero por mermas o quiebres de stock, permitiéndoles tomar decisiones basadas en números y no en intuición.
                       </p>
                     </CardContent>
                   </Card>
@@ -200,7 +200,7 @@ export default function Home() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-muted-foreground leading-relaxed">
-                        Ser reconocidos a nivel distrital, nacional e internacional como una empresa líder en el desarrollo de soluciones tecnológicas integrales, destacando por nuestra excelencia, innovación constante y compromiso con el éxito de nuestros clientes.
+                        Ser el laboratorio de eficiencia operativa para negocios que crecen. Actuamos como el puente tecnológico entre el comercio tradicional y los estándares de la industria moderna, diseñando soluciones modulares de higiene de datos, automatización de pedidos y visibilidad de inventarios hechas a la medida de la trinchera comercial.
                       </p>
                     </CardContent>
                   </Card>
@@ -322,7 +322,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <p className="text-sm">© 2025 All-in Dev Solutions S.R.L. Todos los derechos reservados.</p>
+          <p className="text-sm">© 2025 Nodux. Todos los derechos reservados.</p>
         </div>
       </footer>
 
