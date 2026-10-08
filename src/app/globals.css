@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-light: 221 83% 98%;
+    --foreground-light: 222 47% 11%;
+    --card-light: 0 0% 100%;
+    --card-foreground-light: 222 47% 11%;
+    --popover-light: 0 0% 100%;
+    --popover-foreground-light: 222 47% 11%;
+    --primary-light: 226 70% 32%;
+    --primary-foreground-light: 0 0% 100%;
+    --secondary-light: 221 70% 90%;
+    --secondary-foreground-light: 226 70% 25%;
+    --muted-light: 221 60% 85%;
+    --muted-foreground-light: 220 25% 45%;
+    --accent-light: 262 83% 60%;
+    --accent_raw_light: 262 83% 60%;
+    --accent-foreground-light: 0 0% 100%;
+    --destructive-light: 0 84.2% 60.2%;
+    --destructive-foreground-light: 0 0% 98%;
+    --border-light: 221 50% 80%;
+    --input-light: 221 50% 92%;
+    --ring-light: 226 70% 32%;
+    --primary_raw_light: 226 70% 32%;
+    
+    --gradient-dark-black-hsl: 0 0% 0%;
+    --gradient-dark-metallic-blue-hsl: 220 50% 15%;
+    --gradient-dark-deep-purple-hsl: 270 50% 10%;
+    
+    --background: 220 28% 10%;
+    --foreground: 210 40% 95%;
+    --card: 220 28% 12%;
+    --card-foreground: 210 40% 95%;
+    --popover: 220 30% 10%;
+    --popover-foreground: 210 40% 95%;
+    --primary: 190 90% 55%;
+    --primary_raw: 190 90% 55%;
+    --primary-foreground: 220 30% 5%;
+    --secondary: 220 25% 20%;
+    --secondary-foreground: 210 40% 85%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 210 30% 65%;
+    --accent: 290 80% 65%;
+    --accent_raw: 290 80% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 20% 25%;
+    --input: 220 20% 22%;
+    --ring: 190 90% 55%;
+    --radius: 0.75rem;
+    
+    --shadow-primary-glow: hsla(var(--primary_raw), 0.3);
+    --shadow-accent-glow-30: hsla(var(--accent_raw), 0.3);
+    --shadow-accent-glow-40: hsla(var(--accent_raw), 0.4);
+  }
+
+  .light {
+    --background: var(--background-light);
+    --foreground: var(--foreground-light);
+    --card: var(--card-light);
+    --card-foreground: var(--card-foreground-light);
+    --popover: var(--popover-light);
+    --popover-foreground: var(--popover-foreground-light);
+    --primary: var(--primary-light);
+    --primary_raw: var(--primary_raw_light);
+    --primary-foreground: var(--primary-foreground-light);
+    --secondary: var(--secondary-light);
+    --secondary-foreground: var(--secondary-foreground-light);
+    --muted: var(--muted-light);
+    --muted-foreground: var(--muted-foreground-light);
+    --accent: var(--accent-light);
+    --accent_raw: var(--accent_raw_light);
+    --accent-foreground: var(--accent-foreground-light);
+    --destructive: var(--destructive-light);
+    --destructive-foreground: var(--destructive-foreground-light);
+    --border: var(--border-light);
+    --input: var(--input-light);
+    --ring: var(--ring-light);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-body text-foreground antialiased;
+    background: linear-gradient(135deg, hsl(var(--gradient-dark-black-hsl)) 0, hsl(var(--gradient-dark-metallic-blue-hsl)) 50%, hsl(var(--gradient-dark-deep-purple-hsl)) 100%);
+  }
+  .light body {
+    background: hsl(var(--background-light));
+  }
+}
