@@ -267,9 +267,13 @@ export default function Home() {
                             <Card className="text-center bg-card border-border/30 hover:shadow-[0_10px_30px_-5px_var(--shadow-accent-glow-40)] hover:border-accent/70 transform hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden h-full flex flex-col">
                               <CardHeader className="p-0 pt-6">
                                 <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-accent group-hover:border-primary transition-colors duration-300">
-                                   <div className="w-full h-full bg-muted flex items-center justify-center text-xs text-muted-foreground">
-                                     {member.name}
-                                   </div>
+                                   {member.imageUrl ? (
+                                     <Image src={member.imageUrl} alt={member.name} fill className="object-cover" />
+                                   ) : (
+                                     <div className="w-full h-full bg-muted flex items-center justify-center text-xs text-muted-foreground text-center p-2">
+                                       {member.name}
+                                     </div>
+                                   )}
                                 </div>
                               </CardHeader>
                               <CardContent className="p-6 flex flex-col flex-grow">
