@@ -8,7 +8,9 @@ import { Separator } from '@/components/ui/separator';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { projects, teamMembers } from '@/lib/data';
-import Background3D from '@/components/ui/background-3d';
+import dynamic from 'next/dynamic';
+
+const Background3D = dynamic(() => import('@/components/ui/background-3d'), { ssr: false });
 
 export default function Home() {
   return (
