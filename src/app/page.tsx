@@ -8,21 +8,12 @@ import { Separator } from '@/components/ui/separator';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { projects, teamMembers } from '@/lib/data';
+import Background3D from '@/components/ui/background-3d';
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 border-b border-primary/30 shadow-xl relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            alt="Fondo de encabezado ciudad neón"
-            src="https://img.freepik.com/vector-gratis/ciudad-moderna-noche-horizonte-neon-dibujos-animados_1441-3160.jpg?semt=ais_hybrid&w=740"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-        </div>
+      <header className="sticky top-0 z-50 border-b border-primary/30 shadow-xl bg-background/95 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between relative z-10 py-4 px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3 group">
             <Image
@@ -63,15 +54,8 @@ export default function Home() {
 
       <main className="flex-grow">
         <section className="relative h-screen flex items-center justify-center text-foreground overflow-hidden">
-          <Image
-            src="https://img.freepik.com/vector-gratis/ciudad-moderna-noche-horizonte-neon-dibujos-animados_1441-3160.jpg?semt=ais_hybrid&w=740"
-            alt="Fondo Hero All-in Dev Solutions ciudad neón"
-            fill
-            className="object-cover z-0"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
+          <Background3D />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20 mt-10">
             <div className="inline-block p-3 mb-6 bg-accent/20 rounded-full shadow-lg border border-accent/50">
               <Image
                 src="/images/logo.jpg"
