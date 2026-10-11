@@ -113,7 +113,7 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
       </main>
 
       <footer className="py-8 border-t border-border/20 text-center">
-        <p className="text-sm text-muted-foreground">© 2025 Nodux. Todos los derechos reservados.</p>
+        <p className="text-sm text-muted-foreground">© 2026 Nodux. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
