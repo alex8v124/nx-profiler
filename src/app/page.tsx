@@ -321,7 +321,7 @@ export default function Home() {
               <a href="https://wa.me/51919620888" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" className="text-muted-foreground hover:text-accent transition-colors duration-300">
                 <MessageCircle className="h-7 w-7" />
               </a>
-              <a href="https://www.linkedin.com/company/nodux" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn" className="text-muted-foreground hover:text-primary transition-colors duration-300">
+              <a href="https://www.linkedin.com/company/nodux-b2b" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil de LinkedIn de Nodux" className="text-muted-foreground hover:text-primary transition-colors duration-300">
                 <Linkedin className="h-7 w-7" />
               </a>
             </div>
