@@ -105,7 +105,7 @@ export default function Chatbot() {
       // Process bold **text**
       const parts = line.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
       return (
-        <span key={lineIdx} className="block leading-relaxed min-h-[1.2rem]">
+        <span key={lineIdx} className="block leading-relaxed min-h-[1.2rem] break-words [overflow-wrap:anywhere]">
           {parts.map((part, pIdx) => {
             if (part.startsWith('**') && part.endsWith('**')) {
               return (
@@ -122,7 +122,7 @@ export default function Chatbot() {
                   href={linkMatch[2]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary underline hover:text-accent font-medium inline-flex items-center gap-0.5"
+                  className="text-primary underline hover:text-accent font-medium inline-flex items-center gap-0.5 break-all"
                 >
                   {linkMatch[1]}
                 </a>
@@ -212,7 +212,7 @@ export default function Chatbot() {
           </div>
 
           {/* Messages Body */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 text-sm scroll-smooth">
+          <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 text-sm scroll-smooth no-scrollbar">
             {messages.map((message) => {
               const isUser = message.role === 'user';
               return (
@@ -226,9 +226,9 @@ export default function Chatbot() {
                     </div>
                   )}
 
-                  <div className={`flex flex-col max-w-[82%] ${isUser ? 'items-end' : 'items-start'}`}>
+                  <div className={`flex flex-col max-w-[85%] ${isUser ? 'items-end' : 'items-start'} min-w-0`}>
                     <div
-                      className={`px-4 py-3 rounded-2xl shadow-sm text-sm ${
+                      className={`px-4 py-3 rounded-2xl shadow-sm text-sm break-words overflow-hidden ${
                         isUser
                           ? 'bg-primary text-primary-foreground rounded-br-none'
                           : 'bg-secondary/70 text-card-foreground border border-border/50 rounded-bl-none backdrop-blur-md'
