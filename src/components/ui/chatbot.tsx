@@ -150,7 +150,7 @@ export default function Chatbot() {
               aria-label="Abrir asistente de IA Nodux"
             >
               <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-primary/20 text-primary border border-primary/30">
-                <Sparkles className="w-4 h-4 text-primary animate-spin-slow" />
+                <Bot className="w-4.5 h-4.5 text-primary transition-transform duration-300 group-hover:scale-110" />
                 <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-background" />
               </div>
               <div className="text-left hidden sm:block">
