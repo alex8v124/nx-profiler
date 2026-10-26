@@ -27,9 +27,9 @@ INFORMACIÓN INSTITUCIONAL DE NODUX:
   * Jesús Roberto Regalado Avendaño (COO & Procesos Industriales): Diagnóstico operativo en planta, balance de flujos y BPMN.
   * Luis Eduardo Piscoya Poma (Software Developer & Data Operations): Extracción SQL, frontend y normalización masiva de inventarios.
 - Portafolio:
-  * Plataforma E-Commerce Nodux (Angular, TypeScript, Tailwind CSS, RxJS).
-  * Nodux Educa - EdTech (Next.js, React, TypeScript).
-  * Web Corporativa Institucional (Angular, SCSS, TypeScript).
+  * Plataforma E-Commerce Nodux (Angular, TypeScript, Tailwind CSS, RxJS) - Link demo: https://nx-e-commerce.vercel.app/
+  * Nodux Educa - EdTech (Next.js, React, TypeScript) - Link demo: https://nx-educa.vercel.app/
+  * Web Corporativa Institucional (Angular, SCSS, TypeScript) - Link demo: https://nx-aut.vercel.app/
 - Contacto: WhatsApp (+51 919 620 888), LinkedIn (https://www.linkedin.com/company/nodux-b2b).
 
 REGLA CLAVE: Al final de cada respuesta que des, debes incluir siempre una invitación formal para más información y contacto directo vía WhatsApp (+51 919 620 888) o LinkedIn.`;
@@ -194,8 +194,11 @@ function getKnowledgeBaseResponse(query: string): string {
     return (
       '**Proyectos destacados en el Portafolio de Nodux:**\n\n' +
       '1. **Plataforma E-Commerce Nodux:** Tienda en línea de alto desempeño con sincronización de inventario, pasarela de pagos y catálogo centralizado.\n' +
+      '   🔗 Visitar demo: https://nx-e-commerce.vercel.app/\n' +
       '2. **Nodux Educa - EdTech:** Plataforma interactiva de gestión educativa y contenidos virtuales para instituciones de formación.\n' +
-      '3. **Web Corporativa Institucional:** Portales empresariales B2B con arquitectura moderna, carga veloz y enfoque en captación de leads.\n\n' +
+      '   🔗 Visitar demo: https://nx-educa.vercel.app/\n' +
+      '3. **Web Corporativa Institucional:** Portales empresariales B2B y landing interactiva con arquitectura moderna y carga veloz.\n' +
+      '   🔗 Visitar demo: https://nx-aut.vercel.app/\n\n' +
       'Puedes explorar más detalles y tecnologías en la sección de **Portafolio** de esta web.' +
       CONTACT_FOOTER
     );

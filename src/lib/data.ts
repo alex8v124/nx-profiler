@@ -31,6 +31,7 @@ export const projects: Project[] = [
     imageHint: 'ecommerce dashboard',
     technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'RxJS'],
     problemSolved: 'Digitalización del canal de ventas para pymes con una experiencia de usuario fluida y una gestión de catálogo centralizada.',
+    liveUrl: 'https://nx-e-commerce.vercel.app/',
   },
   {
     id: 2,
@@ -41,6 +42,7 @@ export const projects: Project[] = [
     imageHint: 'lms dashboard',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     problemSolved: 'Centralización de recursos educativos en un entorno virtual ligero y accesible, permitiendo a instituciones gestionar su currículo.',
+    liveUrl: 'https://nx-educa.vercel.app/',
   },
   {
     id: 3,
@@ -51,6 +53,7 @@ export const projects: Project[] = [
     imageHint: 'corporate website',
     technologies: ['Angular', 'SCSS', 'TypeScript', 'Responsive Design'],
     problemSolved: 'Creación de una presencia digital de autoridad que comunica la propuesta de valor empresarial de manera clara, captando leads cualificados.',
+    liveUrl: 'https://nx-aut.vercel.app/',
   },
 ];
 

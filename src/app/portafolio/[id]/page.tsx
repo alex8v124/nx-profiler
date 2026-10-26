@@ -81,13 +81,21 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
             </div>
 
             {project.liveUrl && (
-              <div className="pt-4">
-                <Button asChild size="lg" className="w-full sm:w-auto font-semibold">
+              <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Button asChild size="lg" className="w-full sm:w-auto font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-300 gap-2">
                   <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    Visitar Sitio en Vivo
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <span>Visitar Sitio en Vivo</span>
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 </Button>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-primary transition-colors truncate max-w-xs flex items-center gap-1.5"
+                >
+                  <span className="truncate">{project.liveUrl}</span>
+                </a>
               </div>
             )}
           </div>
@@ -95,18 +103,42 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
           <div className="lg:mt-4">
             <div className="sticky top-24 aspect-[4/3] w-full rounded-xl overflow-hidden border border-border shadow-2xl shadow-primary/10 group">
               {project.imageUrl && project.imageUrl.startsWith('/') ? (
-                <Image 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                />
+                project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full h-full relative cursor-pointer"
+                    title="Visitar sitio web en vivo"
+                  >
+                    <Image 
+                      src={project.imageUrl} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-300" />
+                    <div className="absolute bottom-4 right-4 bg-background/90 backdrop-blur-md border border-border/80 text-xs font-semibold px-3.5 py-2 rounded-full flex items-center gap-2 text-foreground shadow-lg group-hover:border-primary group-hover:text-primary transition-all duration-300">
+                      <span>Ver proyecto en vivo</span>
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <Image 
+                      src={project.imageUrl} 
+                      alt={project.title} 
+                      fill 
+                      className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
+                  </>
+                )
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-xl">
                   Imagen del Proyecto
                 </div>
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         </div>

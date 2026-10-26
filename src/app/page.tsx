@@ -138,12 +138,26 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
-                      <Link
-                        href={`/portafolio/${project.id}`}
-                        className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
-                      >
-                        Ver Detalles del Proyecto <ExternalLink className="h-4 w-4" />
-                      </Link>
+                      <div className="flex gap-2">
+                        <Link
+                          href={`/portafolio/${project.id}`}
+                          className="flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+                        >
+                          Ver Detalles <ArrowRight className="h-4 w-4" />
+                        </Link>
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md px-3 bg-secondary/80 hover:bg-secondary text-secondary-foreground border border-border/50 shadow-sm hover:text-primary transition-colors"
+                            title="Visitar sitio web en vivo"
+                          >
+                            <span>En vivo</span>
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
