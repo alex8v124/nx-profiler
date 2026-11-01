@@ -53,7 +53,7 @@ export const projects: Project[] = [
     imageHint: 'corporate website',
     technologies: ['Angular', 'SCSS', 'TypeScript', 'Responsive Design'],
     problemSolved: 'Creación de una presencia digital de autoridad que comunica la propuesta de valor empresarial de manera clara, captando leads cualificados.',
-    liveUrl: 'https://nx-aut.vercel.app/',
+    liveUrl: 'https://nx-web-corp.vercel.app/',
   },
 ];
 
