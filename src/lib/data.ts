@@ -46,17 +46,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Web Corporativa Institucional',
-    client: 'Empresas B2B',
-    description: 'Sitio web corporativo de alto impacto, enfocado en la conversión y la presentación profesional de servicios. Estructura robusta, carga rápida y diseño responsivo.',
-    imageUrl: '/images/portfolio/nx-web-corp.png',
-    imageHint: 'corporate website',
-    technologies: ['Angular', 'SCSS', 'TypeScript', 'Responsive Design'],
-    problemSolved: 'Creación de una presencia digital de autoridad que comunica la propuesta de valor empresarial de manera clara, captando leads cualificados.',
-    liveUrl: 'https://nx-web-corp.vercel.app/',
-  },
-  {
-    id: 4,
     title: 'Portal Automotriz NX-7 PHEV',
     client: 'Sector Automotriz / NODUX Auto',
     description: 'Landing page inmersiva de alto impacto para la SUV híbrida NODUX NX-7 PHEV. Incluye visualizador de modelos, galería interactiva de acabados, especificaciones técnicas y cotizador dinámico multicanal.',
@@ -65,6 +54,17 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
     problemSolved: 'Presentación comercial inmersiva y captación digital de leads cualificados para vehículos híbridos con cotización directa e integración multicanal.',
     liveUrl: 'https://nx-aut.vercel.app/',
+  },
+  {
+    id: 4,
+    title: 'Web Corporativa Institucional',
+    client: 'Empresas B2B',
+    description: 'Sitio web corporativo de alto impacto, enfocado en la conversión y la presentación profesional de servicios. Estructura robusta, carga rápida y diseño responsivo.',
+    imageUrl: '/images/portfolio/nx-web-corp.png',
+    imageHint: 'corporate website',
+    technologies: ['Angular', 'SCSS', 'TypeScript', 'Responsive Design'],
+    problemSolved: 'Creación de una presencia digital de autoridad que comunica la propuesta de valor empresarial de manera clara, captando leads cualificados.',
+    liveUrl: 'https://nx-web-corp.vercel.app/',
   },
 ];
 
