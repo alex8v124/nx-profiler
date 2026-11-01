@@ -55,6 +55,17 @@ export const projects: Project[] = [
     problemSolved: 'Creación de una presencia digital de autoridad que comunica la propuesta de valor empresarial de manera clara, captando leads cualificados.',
     liveUrl: 'https://nx-web-corp.vercel.app/',
   },
+  {
+    id: 4,
+    title: 'Portal Automotriz NX-7 PHEV',
+    client: 'Sector Automotriz / NODUX Auto',
+    description: 'Landing page inmersiva de alto impacto para la SUV híbrida NODUX NX-7 PHEV. Incluye visualizador de modelos, galería interactiva de acabados, especificaciones técnicas y cotizador dinámico multicanal.',
+    imageUrl: '/images/portfolio/nx-aut.png',
+    imageHint: 'automotive showcase',
+    technologies: ['JavaScript', 'HTML5', 'CSS3', 'Responsive Design'],
+    problemSolved: 'Presentación comercial inmersiva y captación digital de leads cualificados para vehículos híbridos con cotización directa e integración multicanal.',
+    liveUrl: 'https://nx-aut.vercel.app/',
+  },
 ];
 
 export const teamMembers: TeamMember[] = [

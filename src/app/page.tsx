@@ -108,9 +108,9 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
               {projects.map((project, index) => (
-                <Card key={project.id} className={`group flex flex-col h-full bg-card/90 backdrop-blur-sm border-border/60 hover:border-primary/50 shadow-lg hover:shadow-[0_10px_40px_-10px_var(--shadow-primary-glow)] transform hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-on-scroll stagger-${(index % 3) + 1}`}>
+                <Card key={project.id} className={`group flex flex-col h-full bg-card/90 backdrop-blur-sm border-border/60 hover:border-primary/50 shadow-lg hover:shadow-[0_10px_40px_-10px_var(--shadow-primary-glow)] transform hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-on-scroll stagger-${(index % 4) + 1}`}>
                   <CardHeader className="p-0">
                     <Link href={`/portafolio/${project.id}`} className="block aspect-[16/10] relative w-full overflow-hidden bg-muted cursor-pointer" title={`Ver detalles de ${project.title}`}>
                       {project.imageUrl ? (

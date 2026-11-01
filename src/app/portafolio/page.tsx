@@ -29,7 +29,7 @@ export default function PortfolioPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {projects.map((project) => (
             <Card key={project.id} className="group overflow-hidden bg-card/90 border-border/60 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 flex flex-col transform hover:-translate-y-2">
               <CardHeader className="p-0">
