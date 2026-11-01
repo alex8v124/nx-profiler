@@ -100,19 +100,19 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16 animate-on-scroll">
               <Badge variant="outline" className="mb-4 border-primary/30 text-primary bg-primary/5 px-4 py-1 text-sm rounded-full">Proyectos Destacados</Badge>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-foreground">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline text-slate-950 dark:text-slate-100">
                 Nuestro Portafolio
               </h2>
-              <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="mt-6 text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
                 Descubre algunos de los proyectos innovadores que hemos entregado, demostrando nuestra experticia y compromiso con la calidad.
               </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card key={project.id} className={`group flex flex-col h-full bg-card/60 backdrop-blur-sm border-border/50 hover:border-primary/50 shadow-lg hover:shadow-[0_10px_40px_-10px_var(--shadow-primary-glow)] transform hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-on-scroll stagger-${(index % 3) + 1}`}>
+                <Card key={project.id} className={`group flex flex-col h-full bg-card/90 backdrop-blur-sm border-border/60 hover:border-primary/50 shadow-lg hover:shadow-[0_10px_40px_-10px_var(--shadow-primary-glow)] transform hover:-translate-y-2 transition-all duration-500 overflow-hidden animate-on-scroll stagger-${(index % 3) + 1}`}>
                   <CardHeader className="p-0">
-                    <div className="aspect-[16/10] relative w-full overflow-hidden bg-muted">
+                    <Link href={`/portafolio/${project.id}`} className="block aspect-[16/10] relative w-full overflow-hidden bg-muted cursor-pointer" title={`Ver detalles de ${project.title}`}>
                       {project.imageUrl ? (
                         <Image src={project.imageUrl} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                       ) : (
@@ -121,27 +121,36 @@ export default function Home() {
                           <span className="text-sm font-medium">Sube imagen en /images/portfolio</span>
                         </div>
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                        <span className="text-white text-xs font-semibold px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center gap-1.5 shadow-md">
+                          Ver detalles <ArrowRight className="h-3 w-3" />
+                        </span>
+                      </div>
+                    </Link>
                   </CardHeader>
                   <CardContent className="p-8 flex-grow flex flex-col relative z-10 bg-gradient-to-b from-card/40 to-transparent">
-                    <div className="font-bold tracking-tight text-2xl mb-3 font-headline text-foreground group-hover:text-primary transition-colors">
-                      {project.title}
-                    </div>
-                    <p className="text-sm text-accent font-medium mb-4 flex items-center"><Target className="w-4 h-4 mr-2"/> Cliente: {project.client}</p>
+                    <Link href={`/portafolio/${project.id}`}>
+                      <div className="font-bold tracking-tight text-2xl mb-3 font-headline text-slate-950 dark:text-slate-100 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </div>
+                    </Link>
+                    <p className="text-sm font-semibold text-slate-900 dark:text-slate-200 mb-4 flex items-center">
+                      <Target className="w-4 h-4 mr-2 text-primary shrink-0" />
+                      <span className="text-slate-500 dark:text-slate-400 font-medium mr-1.5">Cliente:</span> {project.client}
+                    </p>
                     
                     <div className="mb-6">
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                         {project.description}
                       </p>
                     </div>
 
                     <div className="mt-auto space-y-6">
                       <div>
-                        <h4 className="text-xs font-semibold mb-2 text-foreground uppercase tracking-wider">Tecnologías</h4>
+                        <h4 className="text-xs font-bold mb-2 text-slate-900 dark:text-slate-200 uppercase tracking-wider">Tecnologías</h4>
                         <div className="flex flex-wrap gap-2">
                           {project.technologies.map((tech) => (
-                            <Badge key={tech} variant="secondary" className="bg-secondary text-secondary-foreground border border-border/50">
+                            <Badge key={tech} variant="secondary" className="bg-slate-100 text-slate-800 border-slate-200/80 hover:bg-slate-200 dark:bg-secondary dark:text-secondary-foreground dark:border-border/50 font-medium">
                               {tech}
                             </Badge>
                           ))}
@@ -150,7 +159,7 @@ export default function Home() {
                       <div className="flex gap-2">
                         <Link
                           href={`/portafolio/${project.id}`}
-                          className="flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
+                          className="flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md bg-primary hover:bg-primary/90 text-primary-foreground shadow-md"
                         >
                           Ver Detalles <ArrowRight className="h-4 w-4" />
                         </Link>
@@ -159,7 +168,7 @@ export default function Home() {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md px-3 bg-secondary/80 hover:bg-secondary text-secondary-foreground border border-border/50 shadow-sm hover:text-primary transition-colors"
+                            className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 rounded-md px-3 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 dark:bg-secondary/80 dark:hover:bg-secondary dark:text-secondary-foreground dark:border-border/50 shadow-sm hover:text-primary transition-colors"
                             title="Visitar sitio web en vivo"
                           >
                             <span>En vivo</span>
