@@ -314,14 +314,15 @@ export default function ScheduleView() {
                 <button
                   key={c.id}
                   onClick={() => setFilter(c.id)}
-                  className="px-3.5 py-1.5 rounded-full text-sm border transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm border transition-colors font-medium"
                   style={
                     filter === c.id
-                      ? { background: c.color, color: '#0F172A', borderColor: c.color, fontWeight: 600 }
-                      : { background: hexAlpha(c.color, 0.06), color: c.color, borderColor: hexAlpha(c.color, 0.3) }
+                      ? { background: c.color, color: c.id === 'interbank' ? '#0F172A' : '#FFFFFF', borderColor: c.color, fontWeight: 600 }
+                      : { background: hexAlpha(c.color, 0.08), borderColor: hexAlpha(c.color, 0.35) }
                   }
                 >
-                  {c.shortName}
+                  <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: c.color }} />
+                  <span className={filter === c.id ? '' : 'text-slate-800 dark:text-slate-200'}>{c.shortName}</span>
                 </button>
               ))}
             </div>

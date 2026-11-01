@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { projects, teamMembers } from '@/lib/data';
 import ClientBackground from '@/components/ui/client-background';
 import ScrollAnimations from '@/components/ui/scroll-animations';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 export default function Home() {
   return (
@@ -31,13 +32,15 @@ export default function Home() {
               Nodux
             </h1>
           </Link>
-          <nav className="hidden md:flex gap-8">
+          <nav className="hidden md:flex gap-8 items-center">
             <Link href="#portfolio" className="font-medium text-muted-foreground hover:text-primary transition-colors">Portafolio</Link>
             <Link href="#about" className="font-medium text-muted-foreground hover:text-primary transition-colors">Nosotros</Link>
             <Link href="#team" className="font-medium text-muted-foreground hover:text-primary transition-colors">Equipo</Link>
             <Link href="/cronograma" className="font-medium text-muted-foreground hover:text-primary transition-colors">Cronograma</Link>
+            <ThemeToggle />
           </nav>
-          <div className="md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-foreground hover:text-primary hover:bg-primary/10 h-10 w-10">
@@ -51,6 +54,10 @@ export default function Home() {
                   <Link href="#about" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Nosotros</Link>
                   <Link href="#team" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Equipo</Link>
                   <Link href="/cronograma" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Cronograma</Link>
+                  <div className="pt-4 border-t border-border/40">
+                    <p className="text-xs uppercase font-semibold text-muted-foreground mb-3">Apariencia</p>
+                    <ThemeToggle variant="segmented" />
+                  </div>
                 </nav>
               </SheetContent>
             </Sheet>

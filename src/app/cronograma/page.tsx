@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, CalendarDays } from 'lucide-react';
 import ScheduleView from '@/components/ui/schedule-view';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 export const metadata: Metadata = {
   title: 'Cronograma | Nodux',
@@ -20,10 +21,13 @@ export default function SchedulePage() {
             <span className="hidden sm:inline">Volver al Inicio</span>
             <span className="sm:hidden">Inicio</span>
           </Link>
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/logo.jpg" alt="Nodux" width={32} height={32} className="rounded-md" />
-            <span className="font-bold font-headline text-foreground">Nodux</span>
-          </Link>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/images/logo.jpg" alt="Nodux" width={32} height={32} className="rounded-md" />
+              <span className="font-bold font-headline text-foreground">Nodux</span>
+            </Link>
+          </div>
         </div>
       </header>
 

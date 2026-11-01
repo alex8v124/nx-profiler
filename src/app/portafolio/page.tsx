@@ -4,16 +4,18 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { projects } from '@/lib/data';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 export default function PortfolioPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 border-b border-primary/30 shadow-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex items-center h-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <ArrowLeft className="h-5 w-5" />
             <span>Volver al Inicio</span>
           </Link>
+          <ThemeToggle />
         </div>
       </header>
 

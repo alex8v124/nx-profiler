@@ -82,8 +82,9 @@ export default function BackgroundNetwork() {
     let pulses: Pulse[] = [];
 
     const animate = () => {
-      // Estela sutil en lugar de clear total — da un efecto de movimiento más suave
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.15)'; // #0F172A con opacidad
+      const isDark = document.documentElement.classList.contains('dark');
+      // Estela sutil en lugar de clear total — se adapta dinámicamente a modo claro y oscuro
+      ctx.fillStyle = isDark ? 'rgba(15, 23, 42, 0.18)' : 'rgba(248, 250, 252, 0.3)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       frameCount++;
       const time = frameCount / 60;
@@ -189,9 +190,10 @@ export default function BackgroundNetwork() {
           ctx.fill();
 
           // Nodo principal
+          const nodeSlate = isDark ? SLATE : { r: 100, g: 116, b: 139 };
           ctx.beginPath();
           ctx.arc(proj.px, proj.py, r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(${SLATE.r}, ${SLATE.g}, ${SLATE.b}, ${alpha})`;
+          ctx.fillStyle = `rgba(${nodeSlate.r}, ${nodeSlate.g}, ${nodeSlate.b}, ${alpha})`;
           ctx.fill();
         }
       }
@@ -249,9 +251,9 @@ export default function BackgroundNetwork() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none" style={{ backgroundColor: '#0F172A' }}>
+    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-background transition-colors duration-300">
       <canvas ref={canvasRef} className="block w-full h-full" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F172A]/40 to-[#0F172A] z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10 transition-colors duration-300" />
     </div>
   );
 }

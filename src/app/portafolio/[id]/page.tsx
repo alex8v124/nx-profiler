@@ -6,6 +6,7 @@ import { projects } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import ThemeToggle from '@/components/ui/theme-toggle';
 
 export default async function ProjectPage(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
@@ -18,11 +19,12 @@ export default async function ProjectPage(props: { params: Promise<{ id: string 
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-50 border-b border-primary/30 shadow-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex items-center h-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           <Link href="/portafolio" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
             <ArrowLeft className="h-5 w-5" />
             <span>Volver al Portafolio</span>
           </Link>
+          <ThemeToggle />
         </div>
       </header>
 
