@@ -168,3 +168,23 @@
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
 }
+
+/* Entrada animada para elementos que se renderizan dinámicamente (filtros, vistas) */
+@keyframes fadeUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUpIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none;
+  }
+}

@@ -35,6 +35,7 @@ export default function Home() {
             <Link href="#portfolio" className="font-medium text-muted-foreground hover:text-primary transition-colors">Portafolio</Link>
             <Link href="#about" className="font-medium text-muted-foreground hover:text-primary transition-colors">Nosotros</Link>
             <Link href="#team" className="font-medium text-muted-foreground hover:text-primary transition-colors">Equipo</Link>
+            <Link href="/cronograma" className="font-medium text-muted-foreground hover:text-primary transition-colors">Cronograma</Link>
           </nav>
           <div className="md:hidden">
             <Sheet>
@@ -49,6 +50,7 @@ export default function Home() {
                   <Link href="#portfolio" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Portafolio</Link>
                   <Link href="#about" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Nosotros</Link>
                   <Link href="#team" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Equipo</Link>
+                  <Link href="/cronograma" className="text-xl font-medium text-foreground hover:text-primary transition-colors">Cronograma</Link>
                 </nav>
               </SheetContent>
             </Sheet>
